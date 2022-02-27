@@ -70,8 +70,8 @@ afterEach(() => {
 })
 afterAll(() => server.close())
 
-describe('Comment page with useSWR / Success+Error', () => {
-  it('Should render the value fetched by useSWR ', async () => {
+describe.skip('Comment page with useSWR / Success+Error', () => {
+  it.skip('Should render the value fetched by useSWR ', async () => {
     render(
       <SWRConfig value={{ dedupingInterval: 0 }}>
         <CommentPage />

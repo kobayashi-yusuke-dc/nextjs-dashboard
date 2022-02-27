@@ -67,7 +67,7 @@ afterEach(() => {
 afterAll(() => {
   server.close()
 })
-describe(`Todos page / useSWR`, () => {
+describe.skip(`Todos page / useSWR`, () => {
   let staticProps: TASK[]
   staticProps = [
     {
@@ -83,7 +83,7 @@ describe(`Todos page / useSWR`, () => {
       completed: false,
     },
   ]
-  it('Should render CSF data after pre-rendered data', async () => {
+  it.skip('Should render CSF data after pre-rendered data', async () => {
     render(
       <SWRConfig value={{ dedupingInterval: 0 }}>
         <TaskPage staticTasks={staticProps} />
