@@ -18,30 +18,36 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
           >
             <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
           </svg>
-          <span className="ml-2 text-sm font-bold">こばやしぼーど</span>
+          <span className="ml-2 text-sm font-bold">
+            こばやし
+            <br />
+            ぼーど
+          </span>
         </a>
         <div className="w-full px-2">
           <div className="flex flex-col items-center w-full mt-3 border-t border-gray-700">
-            <a
-              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
-              href="#"
-            >
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <Link href="/">
+              <a
+                className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
+                href="#"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-              <span className="ml-2 text-sm font-medium">Dasboard</span>
-            </a>
+                <svg
+                  className="w-6 h-6 stroke-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <span className="ml-2 text-sm font-medium">Dasboard</span>
+              </a>
+            </Link>
             <a
               className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
               href="#"
@@ -124,26 +130,28 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               </svg>
               <span className="ml-2 text-sm font-medium">Products</span>
             </a>
-            <a
-              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
-              href="#"
-            >
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <Link href="/settings">
+              <a
+                className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
+                href="#"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                />
-              </svg>
-              <span className="ml-2 text-sm font-medium">Settings</span>
-            </a>
+                <svg
+                  className="w-6 h-6 stroke-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+                <span className="ml-2 text-sm font-medium">Settings</span>
+              </a>
+            </Link>
             <a
               className="relative flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
               href="#"
@@ -193,7 +201,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
       <div className="flex flex-col flex-grow">
         {/* navber */}
         <div className="flex items-center flex-shrink-0 h-16 px-8 text-indigo-300 bg-indigo-900">
-          <h1 className="text-lg font-medium">Page Title</h1>
+          <h1 className="text-lg font-medium">{title}</h1>
           <button className="flex items-center justify-center h-10 px-4 ml-auto text-sm font-medium rounded hover:bg-indigo-700">
             Action 1
           </button>
@@ -204,159 +212,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
 
         {/* メインのコンテント */}
         <div className="flex flex-col flex-grow p-6 overflow-auto items-center justify-center bg-gray-800">
-          {/* グラフ */}
-          <div className="flex flex-col items-center w-full max-w-screen-md p-6 pb-6 mt-10 bg-white rounded-lg shadow-xl sm:p-8">
-            <h2 className="text-xl font-bold">Monthly Revenue</h2>
-            <span className="text-sm font-semibold text-gray-500">2020</span>
-            <div className="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $37,500
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-16 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Jan</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $45,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Feb</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $47,500
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Mar</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $50,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Apr</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $47,500
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">May</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $55,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Jun</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $60,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-16 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Jul</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $57,500
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-10 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Aug</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $67,500
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-10 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-32 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Sep</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $65,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow bg-indigo-400 h-28"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Oct</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $70,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-40 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Nov</span>
-              </div>
-              <div className="relative flex flex-col items-center flex-grow pb-5 group">
-                <span className="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">
-                  $75,000
-                </span>
-                <div className="flex items-end w-full">
-                  <div className="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
-                  <div className="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
-                  <div className="relative flex justify-center flex-grow h-40 bg-indigo-400"></div>
-                </div>
-                <span className="absolute bottom-0 text-xs font-bold">Dec</span>
-              </div>
-            </div>
-            <div className="flex w-full mt-3">
-              <div className="flex items-center ml-auto">
-                <span className="block w-4 h-4 bg-indigo-400"></span>
-                <span className="ml-1 text-xs font-medium">Existing</span>
-              </div>
-              <div className="flex items-center ml-4">
-                <span className="block w-4  h-4 bg-indigo-300"></span>
-                <span className="ml-1 text-xs font-medium">Upgrades</span>
-              </div>
-              <div className="flex items-center ml-4">
-                <span className="block w-4  h-4 bg-indigo-200"></span>
-                <span className="ml-1 text-xs font-medium">New</span>
-              </div>
-            </div>
-          </div>
+          {children}
         </div>
       </div>
     </body>

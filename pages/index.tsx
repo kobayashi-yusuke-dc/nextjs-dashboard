@@ -1,8 +1,16 @@
+import dynamic from "next/dynamic";
 import Layout from '../components/Layout'
+
+
+// SSR対応するためにdynamic importしてる
+const Chart = dynamic(
+    () => import("../components/GanttChart"),
+    { ssr: false }
+);
 const Home: React.FC = () => {
   return (
     <Layout title="Home">
-      <p className="text-4xl">Welcome to Nextjs</p>
+      < Chart />
     </Layout>
   )
 }
