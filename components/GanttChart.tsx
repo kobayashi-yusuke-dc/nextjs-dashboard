@@ -68,7 +68,7 @@ const GanttChart: React.FC = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center w-full max-w-screen-xl p-6 pb-6 mt-10 bg-white rounded-lg shadow-xl sm:p-8">
+    <div className="flex flex-col items-center w-full p-6 pb-6 bg-white rounded-lg">
       {/* chartのコンテナとなるRefを渡す */}
       <div ref={divRef} style={{ height: 300, width: '100%' }} />
     </div>

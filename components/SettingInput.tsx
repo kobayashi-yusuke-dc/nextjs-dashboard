@@ -1,7 +1,7 @@
 const SettingInput: React.FC = () => {
   return (
-    // <div className="flex flex-col items-center w-full max-w-screen-xl p-6 pb-6 mt-10 bg-white rounded-lg shadow-xl sm:p-8">
-      <div className="md:grid md:grid-cols-3 md:gap-6">
+    <div className="flex flex-col w-full">
+      {/* <div className="md:grid md:grid-cols-3 md:gap-6"> */}
         <div className="mt-5 md:mt-0 md:col-span-2">
           <form action="#" method="POST">
             <div className="shadow sm:rounded-md sm:overflow-hidden">
@@ -124,8 +124,8 @@ const SettingInput: React.FC = () => {
             </div>
           </form>
         </div>
-      </div>
-    // </div>
+      {/* </div> */}
+    </div>
   )
 }
 export default SettingInput

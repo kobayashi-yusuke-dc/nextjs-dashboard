@@ -26,7 +26,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
         </a>
         <div className="w-full px-2">
           <div className="flex flex-col items-center w-full mt-3 border-t border-gray-700">
-            <Link href="/">
+            <Link href="/dasborad">
               <a
                 className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
                 href="#"
@@ -48,26 +48,28 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
                 <span className="ml-2 text-sm font-medium">Dasboard</span>
               </a>
             </Link>
-            <a
-              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
-              href="#"
-            >
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <Link href="/search">
+              <a
+                className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
+                href="#"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-              <span className="ml-2 text-sm font-medium">Search</span>
-            </a>
+                <svg
+                  className="w-6 h-6 stroke-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                <span className="ml-2 text-sm font-medium">Search</span>
+              </a>
+            </Link>
             <a
               className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
               href="#"
@@ -86,7 +88,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
                   d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                 />
               </svg>
-              <span className="ml-2 text-sm font-medium">Insights</span>
+              <span className="ml-2 text-sm font-medium">Issues</span>
             </a>
             <a
               className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
@@ -109,27 +111,8 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               <span className="ml-2 text-sm font-medium">Docs</span>
             </a>
           </div>
+
           <div className="flex flex-col items-center w-full mt-2 border-t border-gray-700">
-            <a
-              className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
-              href="#"
-            >
-              <svg
-                className="w-6 h-6 stroke-current"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              <span className="ml-2 text-sm font-medium">Products</span>
-            </a>
             <Link href="/settings">
               <a
                 className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
@@ -211,7 +194,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
         </div>
 
         {/* メインのコンテント */}
-        <div className="flex flex-col flex-grow p-6 overflow-auto items-center justify-center bg-gray-800">
+        <div className="flex flex-grow p-6 overflow-auto items-start justify-center bg-gray-800">
           {children}
         </div>
       </div>
